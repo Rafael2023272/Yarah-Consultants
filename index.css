@@ -7,6 +7,7 @@
   
   body, html {
     font-family: Arial, sans-serif;
+    background-color: #002244;
   }
   
   /* Navbar */
@@ -17,7 +18,7 @@
     background-color: #002b70;
     padding: 15px 40px;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     width: 100%;
   }
   
@@ -39,7 +40,7 @@
   }
 
   .nav-links li a:hover {
-    color: black;
+    color: rgb(213, 189, 80);
   }
 
   
@@ -47,7 +48,7 @@
     background-color: rgb(0, 0, 0);
     padding: 10px 15px;
     border-radius: 5px;
-    color: rgb(0, 0, 0);
+    color: rgb(175, 148, 9);
   }
   
   /* Hero Section */
@@ -93,7 +94,7 @@
   
   .hero-content p {
     font-size: 22px;
-    margin-bottom: 25px;
+    margin-bottom: 10%;
     line-height: 1.5;
   }
   
@@ -103,6 +104,172 @@
     padding: 12px 20px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 4px;
+    margin-top: 10%;
   }
   
+
+        .about-container {
+            display: flex;
+            width: 100%;
+            min-height: 400px;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        .about-image {
+            width: 50%;
+            height: auto;
+            background-color: #f5f5f5; /* Placeholder color */
+            background-image: url('logo.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .about-content {
+            width: 50%;
+            padding: 2rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-content h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: #ffffff;
+        }
+
+        .about-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #ffffff;
+            line-height: 1.8;
+        }
+
+        .learn-more-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            max-width: fit-content;
+            margin-top: 10%;
+        }
+
+        .learn-more-btn:hover {
+            background-color: #0055aa;
+        }
+
+        .arrow {
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .learn-more-btn:hover .arrow {
+            transform: translateX(5px);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+            }
+
+            .about-image,
+            .about-content {
+                width: 100%;
+            }
+
+            .about-image {
+                min-height: 300px;
+            }
+
+            .about-content {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+         .services-container {
+            max-width: 100%;
+            margin: 0%;
+            gap: 20px;
+        }
+
+        .services-header {
+            padding: 40px 0;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .services-header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            width: 100%;
+            gap: 10px;
+        }
+
+        .service-card {
+            position: relative;
+            width: 100%;
+            height: 539px;
+            overflow: hidden;
+        }
+
+        .service-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.75;
+        }
+
+        .service-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 31, 63, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .service-title {
+            color: white;
+            font-size: 1.75rem;
+            font-weight: bold;
+            max-width: 80%;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-card {
+                height: 250px;
+            }
+        }
